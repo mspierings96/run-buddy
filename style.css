@@ -17,6 +17,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url(https://static.fullstack-bootcamp.com/module-1/hero-bg.jpg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
   }
   
   header h1 {
@@ -24,6 +31,7 @@
     margin: 0;
     font-size: 36px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   header a {
     text-decoration: none;
@@ -42,10 +50,11 @@
     list-style: none;
   }
   
-  header nav ul li a {
+  header nav ul li a:hover {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   footer {
@@ -85,7 +94,8 @@
     flex-wrap: wrap;
     background-image: url(https://static.fullstack-bootcamp.com/module-1/hero-bg.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 80%;
+    background-attachment: fixed;
   }
   /* Hero Style End */
 
@@ -102,6 +112,7 @@
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   .hero-form {
@@ -111,6 +122,8 @@
     color: #024e76;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
   }
   
   .hero-form h3 {
@@ -129,18 +142,26 @@
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+  }
+
+  .form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
   }
   
   .hero-form label {
     margin: 0 5px;
   }
   
-  .hero-form button {
+  .hero-form button:hover {
     color: #fce138;
     background-color: #024e76;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
   }
   
   .intro p {
@@ -305,9 +326,10 @@
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
   }
 
-  .contact-form button {
+  .contact-form button:hover {
     width: 100%;
     border: none;
     background: #fce138;
@@ -315,6 +337,7 @@
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
   }
   
   .contact-info p,
@@ -350,6 +373,7 @@
     header {
       padding-bottom: 0;
       justify-content: center;
+      position: relative;
     }
     
     header h1 {
